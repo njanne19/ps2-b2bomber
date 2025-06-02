@@ -1,0 +1,18 @@
+{
+    "cmake.ignoreCMakeListsMissing": true,
+    "files.associations": {
+        "libpad.h": "c",
+        "gskit.h": "c",
+        "math3d.h": "c",
+        "gsinline.h": "c",
+        "dmakit.h": "c",
+        "draw3d.h": "c",
+        "draw.h": "c",
+        "gstoolkit.h": "c",
+        "math.h": "c",
+        "gif_tags.h": "c",
+        "tamtypes.h": "c",
+        "draw_types.h": "c",
+        "kernel.h": "c"
+    }
+}

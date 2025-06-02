@@ -1,0 +1,19 @@
+{
+    "name": "PS2 Dev", 
+    "service": "ps2dev", 
+    "workspaceFolder": "/workspace",
+    "dockerComposeFile": "docker-compose.yaml",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    }
+}
+
