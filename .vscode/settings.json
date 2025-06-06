@@ -13,6 +13,8 @@
         "gif_tags.h": "c",
         "tamtypes.h": "c",
         "draw_types.h": "c",
-        "kernel.h": "c"
+        "kernel.h": "c",
+        "input.h": "c",
+        "irx_embed_symbols.h": "c"
     }
 }

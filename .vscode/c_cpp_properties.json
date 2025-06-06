@@ -9,7 +9,8 @@
                 "${PS2SDK}/common/include",
                 "${PS2DEV}/ee/include",
                 "${PS2DEV}/iop/include",
-                "${PS2DEV}/gsKit/include"
+                "${PS2DEV}/gsKit/include",
+                "${workspaceFolder}/ee/include"
             ],
             "intelliSenseMode": "linux-gcc-x64",
             "compilerPath": "/usr/bin/gcc",

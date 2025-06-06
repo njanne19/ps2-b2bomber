@@ -27,6 +27,7 @@ set(PROJECT_INCLUDE_DIRS
 add_library(bomber_core STATIC
     graphics.c
     physics.c
+    input_manager.c
 )
 
 # 5) Tell the compiler where to find headers for this library:
@@ -47,6 +48,7 @@ target_link_libraries(bomber_core PRIVATE
     dmakit
     draw
     math3d
+    pad
 )
 
 # 7) Ensure the static archive lands in build/lib/

@@ -11,6 +11,10 @@ if(NOT DEFINED PS2DEV)
   message(FATAL_ERROR "PS2DEV not defined in ee/CMakeLists.txt")
 endif()
 
+# Add directory for IOP IRX files built by PS2SDK
+include(${CMAKE_SOURCE_DIR}/cmake/embed_irx.cmake)
+set(IOP_IRX_DIR "${PS2SDK}/iop/irx")
+
 # 2) PS2 SDK include paths (EE side)
 set(PS2_INCLUDE_DIRS
     ${PS2DEV}/gskit/include
@@ -41,6 +45,10 @@ target_include_directories(flightcomputer.elf PRIVATE
     ${PROJECT_INCLUDE_DIRS}
 )
 
+# Embed the IRX files into the flightcomputer.elf target.
+embed_irx(flightcomputer.elf sio2man "${IOP_IRX_DIR}/sio2man.irx")
+embed_irx(flightcomputer.elf padman "${IOP_IRX_DIR}/padman.irx")
+
 # 7) Link flightcomputer.elf against bomber_core (the static lib) 
 #    and any PS2 SDK libraries you need
 target_link_libraries(flightcomputer.elf PRIVATE
@@ -50,6 +58,7 @@ target_link_libraries(flightcomputer.elf PRIVATE
     dmakit
     draw
     math3d
+    pad
 )
 
 # 8) Place flightcomputer.elf into build/ee/ as configured by top-level:
