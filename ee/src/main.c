@@ -8,6 +8,7 @@
 #include <gsKit.h>
 #include <gsInline.h>
 #include <dmaKit.h>
+#include <sifrpc.h>
 
 #include <draw.h>
 #include <draw3d.h>
@@ -20,6 +21,7 @@
 volatile int keep_running = 1; 
 
 int main(int argc, char *argv[]) {
+    sceSifInitRpc(0); 
     GSGLOBAL *gs = GUI_init(); 
     if (gs == NULL) {
         printf("Failed to initialize graphics or GUI.\n");

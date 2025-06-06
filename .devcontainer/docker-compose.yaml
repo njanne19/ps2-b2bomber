@@ -9,4 +9,8 @@ services:
     working_dir: /workspace
     tty: true
     stdin_open: true
-    network_mode: host
+    ports:
+      - "18193:18193/tcp"
+      - "18193:18193/udp"
+      - "18194:18194/tcp"
+      - "18194:18194/udp"
